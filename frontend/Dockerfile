@@ -1,9 +1,10 @@
-FROM node:9.11.1-alpine
-
+FROM node:lts-alpine
 # make the 'app' folder the current working directory
 WORKDIR /app/
 
-COPY package.json ./
+COPY oonavi/package*.json /app/
+COPY oonavi/postcss.config.js /app/
+COPY oonavi/tailwind.config.js /app/
 
 RUN npm cache verify
 
@@ -11,7 +12,7 @@ RUN npm cache verify
 RUN npm install
 
 # copy project files and folders to the current working directory (i.e. 'app' folder)
-COPY . .
+COPY ./oonavi .
 
 EXPOSE 8080
 
