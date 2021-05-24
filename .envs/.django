@@ -1,0 +1,5 @@
+DB_HOST=db
+DB_PORT=3306
+DB_PASSWORD=qweasdfg2s
+DB_USER=admin
+DB_NAME=oonavi
