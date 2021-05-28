@@ -10,7 +10,7 @@ docker-compose up --build
 
 ### For local development (hot reloading on the Vue and Django applications), run the following commnad:
 ```
-docker-compose -f docker-compose.dev.yml up
+docker-compose -f docker-compose.dev.yml up --build
 ```
 
 
